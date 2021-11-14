@@ -1,0 +1,11 @@
+
+
+<string name='name'>黄耀民</string>
+<number name='age'>18</number>
+<boolean name='isBoy'>true</boolean>
+<null name='nul'></null>
+<undefined name='ud'></undefined>
+<function name='func'>
+    if(this.name === '黄耀民') return true;
+    return false;
+</function>
