@@ -1,26 +1,15 @@
 /**
- * 把h文件转为AST
+ * 把xml代码转为AST
  */
 const createAst = require('./createAst')
 const createAstChild = require('./createAstChild')
-/**
-        const ast = {
-            type: '',
-            attrs: {
 
-            },
-            // 基本类型或方法
-            text: '',
-            // 数组和对象
-            children: []
-        }
- */
-
-function hToAst(template) {
+function xmlToAst(template) {
+    // 去除所有缩进符与换行符
     template = template.replace(/\r\n/g, '')
     const root = createAstChild('object', {})
     createAst(root.children, template)
     return root
 }
 
-module.exports = hToAst
+module.exports = xmlToAst

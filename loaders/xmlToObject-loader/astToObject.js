@@ -1,26 +1,12 @@
 /**
  * ast转obj
  */
-const typingsHandler = require('./typingsHandler')
+const compiler = require('./compiler')
 
-function astToObj(ast){
+function astToObj(ast) {
     const obj = {}
     const children = ast.children
-    
-    compile(obj, children)
-
-    function compile(parent, astList) {
-        astList.forEach(ast => {
-            const {
-                type,
-                attrs,
-                text,
-                children
-            } = ast
-
-            compile(parent, type, attrs, text)
-        })
-    }
+    compiler(obj, children)
 
     return obj
 }

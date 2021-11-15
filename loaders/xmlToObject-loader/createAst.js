@@ -18,6 +18,7 @@ const endTag = new RegExp(`<\\/${qnameCapture}[^>]*>`)
 function createAst(children, template) {
     handler(children)
 
+    // 处理函数
     function handler(children) {
         while (template) {
             const startRes = startHandler()

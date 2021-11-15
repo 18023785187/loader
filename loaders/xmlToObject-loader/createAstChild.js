@@ -1,5 +1,5 @@
 /**
- * 生成ast子数
+ * ast模板生成
  */
 
 function astChild(type, attrs, text = undefined, children = []) {
