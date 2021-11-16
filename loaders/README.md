@@ -4,7 +4,7 @@
     把任意后缀的文件转换成js对象，只要在文件中编写xml语法即可。
 
 ### .xml(双标签语法，tag为类型，name为属性名，如果是数组则不需要写name，内容为值)
-```
+```html
     <array name='arr'>
         <string>小红</string>
         <number>18</number>
@@ -23,7 +23,7 @@
 ```
 
 ### 效果
-```
+```javascript
     {
         age: 18
         arr: ['小红', 18, {…}, Array(2)]
@@ -39,4 +39,5 @@
     boolean,
     null,
     object,
-    array
+    array,
+    undefined

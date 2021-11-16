@@ -30,8 +30,6 @@ function compiler(parent, astList) {
             compiler(val, children)
         }
     }
-
-
 }
 
 // 处理类型, 返回挂载上去的值

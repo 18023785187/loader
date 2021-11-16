@@ -3,12 +3,13 @@
  */
 const xmlToAst = require('./xmlToAst')
 const astToObj = require('./astToObject')
+const { stringify } = require('./utils')
 
 module.exports = function(source) {
 
     return `
         export default () => {
-            return eval((${JSON.stringify(astToObj(xmlToAst(source)))}))
+            return eval((${stringify(astToObj(xmlToAst(source)))}))
         }
     `
 }
